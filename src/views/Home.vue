@@ -1,7 +1,8 @@
 <template>
   <div class="home">
     <img alt="logo" src="../assets/img/logo/devtest_logo.png">
-    <p>Hello from home</p>
+    <h1>Welcome to the test of your life</h1>
+    <p>This is a lead, it can go over two lines like so: Lorem ipsum dolor sit amet, consectetur.</p>
 
     <HomeArticles :articles='articles'/>
   </div>
@@ -19,3 +20,9 @@ export default {
   }
 }
 </script>
+
+<style lang='less' scoped>
+  .home {
+    text-align: center;
+  }
+</style>

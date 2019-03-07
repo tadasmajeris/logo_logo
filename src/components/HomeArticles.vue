@@ -3,8 +3,10 @@
     <h1>Articles Pages</h1>
 
     <section class="grid grid--gut12">
-      <HomeArticleItem v-for="{id, type, body, img} in articles"
-        :key='id' :type="type" :body="body" :img="img" :id="id" />
+      <HomeArticleItem v-for="{id, type, title, body, img} in articles"
+        :key='id' :type="type" :title="title"
+        :body="body" :img="img" :id="id"
+      />
     </section>
 
   </div>
@@ -21,3 +23,11 @@ export default {
   }
 }
 </script>
+
+<style lang='less' scoped>
+  h1 {
+    font-family: 'Karma Light';
+    font-size: 20px;
+    margin: 1em;
+  }
+</style>
