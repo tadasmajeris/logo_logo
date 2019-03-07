@@ -5,11 +5,17 @@
       <div class='col col--5 offices home_pd'>
         <h1 class='h1_home'>Our Offices</h1>
         <section>
-          <h2>London home</h2>
+          <h2>
+            London home
+            <MapMarker color='#994ADF'/>
+          </h2>
           <p>Bermondsey Studios<br/>3 Morocco Street<br/>London, SE1 3HB</p>
         </section>
         <section>
-          <h2>Carribean home</h2>
+          <h2>
+            Carribean home
+            <MapMarker color='#F1C00A'/>
+          </h2>
           <p>Republique Dominicaine<br/>Av Refineria 30<br/>Bajos de Haina 91000<br/>Dominican Republic</p>
         </section>
       </div>
@@ -21,8 +27,13 @@
 </template>
 
 <script>
+import MapMarker from './MapMarker';
+
 export default {
   name: 'OfficeMap',
+  components: {
+    MapMarker
+  },
   mounted() {
     const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -31,9 +42,17 @@ export default {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v9',
-      zoom: 5,
-      center: [3.0, 52.372]
+      zoom: 2,
+      center: [-32, 39.7]
     });
+
+    const markerLondon = new mapboxgl.Marker({color: '#994ADF'})
+      .setLngLat([-0.0822466, 51.5002244])
+      .addTo(map);
+
+    const markerCarribean = new mapboxgl.Marker({color: '#F1C00A'})
+      .setLngLat([-70.0373813, 18.4026825])
+      .addTo(map);
   }
 }
 </script>
