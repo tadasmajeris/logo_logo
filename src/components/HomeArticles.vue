@@ -26,6 +26,8 @@ export default {
 
 <style lang='less' scoped>
   .home-articles {
+    margin-bottom: 2em;
+    
     h1 {
       font-family: 'Karma Light';
       font-size: 2.6em;

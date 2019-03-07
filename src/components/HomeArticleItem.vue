@@ -1,6 +1,6 @@
 <template>
 
-  <div class="col col--12 col--4-mxl col--6-ml">
+  <div class="col col--12 col--4-mxl col--6-ml py12 px12">
     <div class='article'>
       <div class="article-image" v-if="img" :style="{backgroundImage: bgImage}"></div>
       <div class='type' :class="typeClass" v-text='type'></div>
@@ -39,6 +39,11 @@ export default {
     border: 1px solid #eee;
     border-radius: 5px;
     height: 100%;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1); ;
+    }
 
     .article-image {
       height: 203px;
@@ -72,11 +77,11 @@ export default {
     }
 
     section {
-      padding: 1em;
+      padding: 1.5em 1em;
 
       h2 {
        font-family: 'Karma SemiBold';
-       font-size: 20px;
+       font-size: 23px;
       }
 
       p {

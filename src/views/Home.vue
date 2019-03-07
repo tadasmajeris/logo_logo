@@ -35,7 +35,7 @@ export default {
     header {
       margin: -1em -9em;
       margin-bottom: 0;
-      padding-bottom: 12em;
+      padding-bottom: 11.4em;
       background-image: url('/img/3.jpg');
       background-size: cover;
       background-position: center;
@@ -46,7 +46,7 @@ export default {
       }
 
       img {
-        margin-top: 1em;
+        margin-top: 1.5em;
         margin-bottom: 10em;
         max-height: 80px;
       }

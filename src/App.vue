@@ -95,4 +95,11 @@ export default {
   .fadePhoto-enter, .fadePhoto-leave-active {
     opacity: 0
   }
+
+  *, *:after {
+    -webkit-transition: 0.2s ease-out;
+    -moz-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+  }
 </style>
