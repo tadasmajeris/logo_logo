@@ -6,15 +6,11 @@
     enter-active-class="animated fadeIn"
     leave-active-class="animated fadeOut">
 
-    <div class='my-container'>
-
-      <main>
-        <transition name="fade">
-          <router-view :articles='articles'></router-view>
-        </transition>
-      </main>
-
-    </div>
+    <main>
+      <transition name="fade">
+        <router-view :articles='articles'></router-view>
+      </transition>
+    </main>
 
   </transition>
 </template>

@@ -1,21 +1,23 @@
 <template>
-  <div class="grid grid--gut12">
+  <div class='articles-pages'>
+    <h1>Articles Pages</h1>
 
-    <div v-for="article in articles" class="col col--12 col--4-ml col--6-mm article">
+    <section class="grid grid--gut12">
+      <HomeArticleItem v-for="{id, type, body, img} in articles"
+        :key='id' :type="type" :body="body" :img="img" :id="id" />
+    </section>
 
-      <a :href="`/article/${article.id}`" v-text='article.title'></a>
-
-      <img v-if="article.img" :src="article.img" />
-
-    </div>
-
-</div>
-
+  </div>
 </template>
 
 <script>
+import HomeArticleItem from './HomeArticleItem';
+
 export default {
   name: 'HomeArticles',
-  props: ['articles']
+  props: ['articles'],
+  components: {
+    HomeArticleItem
+  }
 }
 </script>
