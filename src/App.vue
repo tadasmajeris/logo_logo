@@ -66,17 +66,11 @@ export default {
     font-family: 'Open Sans Regular', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: #4A4A4A;
   }
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #2c2828;
   }
 
   /* transitions */

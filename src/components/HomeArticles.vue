@@ -1,5 +1,5 @@
 <template>
-  <div class='articles-pages'>
+  <div class='home-articles'>
     <h1>Articles Pages</h1>
 
     <section class="grid grid--gut12">
@@ -25,9 +25,11 @@ export default {
 </script>
 
 <style lang='less' scoped>
-  h1 {
-    font-family: 'Karma Light';
-    font-size: 20px;
-    margin: 1em;
+  .home-articles {
+    h1 {
+      font-family: 'Karma Light';
+      font-size: 20px;
+      margin: 1em;
+    }
   }
 </style>
