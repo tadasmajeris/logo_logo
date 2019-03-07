@@ -15,7 +15,7 @@ export default new Router({
       props: true
     },
     {
-      path: '/article',
+      path: '/article/:id',
       name: 'article',
       component: () => import('./views/Article.vue'),
       props: true

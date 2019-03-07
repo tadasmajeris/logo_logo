@@ -8,7 +8,7 @@
 
     <main>
       <transition name="fade">
-        <router-view :articles='articles'></router-view>
+        <router-view :articles='articles' :article="articles[0]"></router-view>
       </transition>
     </main>
 

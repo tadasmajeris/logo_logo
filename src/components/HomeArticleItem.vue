@@ -1,14 +1,16 @@
 <template>
 
   <div class="col col--12 col--4-mxl col--6-ml py12 px12">
-    <div class='article'>
-      <div class="article-image" v-if="img" :style="{backgroundImage: bgImage}"></div>
-      <div class='type' :class="typeClass" v-text='type'></div>
-      <section>
-        <h2 v-text='title'></h2>
-        <p v-text='shortBody'></p>
-      </section>
-    </div>
+    <router-link :to="`/article/${id}`">
+      <div class='article'>
+        <div class="article-image" v-if="img" :style="{backgroundImage: bgImage}"></div>
+        <div class='type' :class="typeClass" v-text='type'></div>
+        <section>
+          <h2 v-text='title'></h2>
+          <p v-text='shortBody'></p>
+        </section>
+      </div>
+    </router-link>
   </div>
 </template>
 

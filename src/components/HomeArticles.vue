@@ -20,7 +20,7 @@ export default {
   props: ['articles'],
   components: {
     HomeArticleItem
-  }
+  },
 }
 </script>
 
