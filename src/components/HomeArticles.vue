@@ -28,8 +28,9 @@ export default {
   .home-articles {
     h1 {
       font-family: 'Karma Light';
-      font-size: 20px;
-      margin: 1em;
+      font-size: 2.6em;
+      margin: 1.5em;
+      margin-top: 3.6em;
     }
   }
 </style>

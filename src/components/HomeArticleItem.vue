@@ -1,9 +1,14 @@
 <template>
-  <div class="col col--12 col--4-ml col--6-mm article">
-    <img v-if="img" :src="img" />
-    <div class='type' :class="typeClass" v-text='type'></div>
-    <h2 v-text='title'></h2>
-    <p v-text='shortBody'></p>
+
+  <div class="col col--12 col--4-mxl col--6-ml">
+    <div class='article'>
+      <div class="article-image" v-if="img" :style="{backgroundImage: bgImage}"></div>
+      <div class='type' :class="typeClass" v-text='type'></div>
+      <section>
+        <h2 v-text='title'></h2>
+        <p v-text='shortBody'></p>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -13,6 +18,10 @@ export default {
   props: ['title', 'img', 'id', 'type', 'body'],
 
   computed: {
+    bgImage() {
+      return `url('${this.img}')`;
+    },
+
     shortBody() {
       return this.body.slice(0, 100) + '...';
     },
@@ -27,10 +36,17 @@ export default {
 <style lang="less" scoped>
   .article {
     text-align: left;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    height: 100%;
 
-    h2 {
-     font-family: 'Karma SemiBold';
-     font-size: 18px;
+    .article-image {
+      height: 203px;
+      background-size: cover;
+      background-position: center;
+      border-radius: inherit;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     .type {
@@ -53,6 +69,19 @@ export default {
     }
     .type-podcast {
       background-color: #0e63e7;
+    }
+
+    section {
+      padding: 1em;
+
+      h2 {
+       font-family: 'Karma SemiBold';
+       font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
   }
 </style>
