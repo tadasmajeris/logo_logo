@@ -92,6 +92,10 @@ export default {
     .home_mg {
       margin: -1em !important;
     }
+
+    .grid {
+      margin-right: -12px;
+    }
   }
 
   @media @tablet {
@@ -108,12 +112,9 @@ export default {
       padding: 1em 9em !important;
     }
     .home_mg {
-      margin: -1em -9em;
+      margin: -1em -9em !important;
     }
   }
-
-
-  </style>
 
   /* transitions */
   .fade-enter-active, .fade-leave-active {

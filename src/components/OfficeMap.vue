@@ -2,7 +2,7 @@
   <section class='home_mg office-map'>
     <div class='grid grid--gut12'>
 
-      <div class='col col--5 offices home_pd'>
+      <div class='col col--12 col--5-mm offices home_pd'>
         <h1 class='h1_home'>Our Offices</h1>
         <section>
           <h2>
@@ -20,7 +20,7 @@
         </section>
       </div>
 
-      <div id='map' class='col col--7'></div>
+      <div id='map' class='col col--12 col--7-mm'></div>
 
     </div>
   </section>
@@ -58,6 +58,8 @@ export default {
 </script>
 
 <style lang='less' scoped>
+  @mobile:   ~"only screen and (max-width: 640px)";
+
   .office-map {
     padding: 8em 0.8em;
 
@@ -89,6 +91,23 @@ export default {
     #map {
       width: 800px;
       height: 480px;
+    }
+
+    @media @mobile {
+      padding-top: 2em;
+
+      .offices {
+        text-align: center;
+        section {
+          padding-bottom: 0 !important;
+        }
+      }
+
+      #map {
+        height: 300px;
+        padding-left: 0;
+      }
+
     }
   }
 

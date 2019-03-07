@@ -73,6 +73,8 @@ export default {
 </script>
 
 <style lang='less' scoped>
+  @mobile:   ~"only screen and (max-width: 640px)";
+
   .home {
     text-align: center;
 
@@ -189,6 +191,28 @@ export default {
             -webkit-filter: brightness(5);
             filter: brightness(5);
           }
+        }
+      }
+    }
+
+    @media @mobile {
+      header {
+        padding-bottom: 3em;
+
+        h1 {
+          font-size: 3.5em;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding-bottom: 0;
+        img {
+          padding-bottom: 2em;
+        }
+        ul {
+          padding-bottom: 1em;
+          float: none !important;
         }
       }
     }
