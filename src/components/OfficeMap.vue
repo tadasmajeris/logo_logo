@@ -4,15 +4,17 @@
 
       <div class='col col--12 col--5-mm offices home_pd'>
         <h1 class='h1_home'>Our Offices</h1>
-        <section>
+        <section @click="flyTo('London')">
           <h2>
+            <span>✈</span>
             London home
             <MapMarker color='#994ADF'/>
           </h2>
           <p>Bermondsey Studios<br/>3 Morocco Street<br/>London, SE1 3HB</p>
         </section>
-        <section>
+        <section @click="flyTo('Carribean')">
           <h2>
+            <span>✈</span>
             Carribean home
             <MapMarker color='#F1C00A'/>
           </h2>
@@ -31,15 +33,23 @@ import MapMarker from './MapMarker';
 
 export default {
   name: 'OfficeMap',
+
+  data() {
+    return {
+      map: null,
+    }
+  },
+
   components: {
     MapMarker
   },
+
   mounted() {
     const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
     mapboxgl.accessToken = 'pk.eyJ1IjoidGFkYW4xMjciLCJhIjoiY2pzeWJvb3EzMGFmYTQzcm5qa2I1OWVocCJ9.i-ANlp_wbow8zyK7L1MMRQ';
 
-    const map = new mapboxgl.Map({
+    this.map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v9',
       zoom: 1.75,
@@ -48,11 +58,18 @@ export default {
 
     const markerLondon = new mapboxgl.Marker({color: '#994ADF'})
       .setLngLat([-0.0822466, 51.5002244])
-      .addTo(map);
+      .addTo(this.map);
 
     const markerCarribean = new mapboxgl.Marker({color: '#F1C00A'})
       .setLngLat([-70.0373813, 18.4026825])
-      .addTo(map);
+      .addTo(this.map);
+  },
+
+  methods: {
+    flyTo(city) {
+      const center = city == 'London' ? [-0.0822466, 51.5002244] : [-70.0373813, 18.4026825];
+      this.map.flyTo({center, zoom: 12});
+    }
   }
 }
 </script>
@@ -76,10 +93,26 @@ export default {
       section {
         padding-bottom: 1em;
         margin-bottom: 4em;
+        cursor: pointer;
+
         h2 {
-         font-family: 'Karma SemiBold';
-         font-size: 23px;
-         margin-bottom: 1em;
+          font-family: 'Karma SemiBold';
+          font-size: 23px;
+          margin-bottom: 1em;
+          span {
+            position: absolute;
+            margin-top: 5px;
+            margin-left: -35px;
+            font-size: 35px;
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          span {
+            margin-left: -26px;
+            opacity: 1;
+          }
         }
 
         p {
