@@ -3,7 +3,9 @@
     <div class='grid grid--gut12'>
 
       <div class='col col--12 col--5-mm offices home_pd'>
+
         <h1 class='h1_home'>Our Offices</h1>
+
         <section @click="flyTo('London')">
           <h2>
             <span>✈</span>
@@ -12,6 +14,7 @@
           </h2>
           <p>Bermondsey Studios<br/>3 Morocco Street<br/>London, SE1 3HB</p>
         </section>
+
         <section @click="flyTo('Carribean')">
           <h2>
             <span>✈</span>
