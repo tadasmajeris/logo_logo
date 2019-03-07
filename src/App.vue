@@ -73,18 +73,47 @@ export default {
     color: #2c2828;
   }
 
+
+
   .h1_home {
     font-family: 'Karma Light';
     font-size: 2.6em;
     margin: 1.5em;
   }
 
-  .home_pd {
-    padding: 1em 9em !important;
+  @desktop:   ~"only screen and (min-width: 960px)";
+  @mobile:   ~"only screen and (max-width: 640px)";
+  @tablet:    ~"only screen and (min-width: 720px) and (max-width: 959px)";
+
+  @media @mobile {
+    .home_pd {
+      padding: 1em !important;
+    }
+    .home_mg {
+      margin: -1em !important;
+    }
   }
-  .home_mg {
-    margin: -1em -9em;
+
+  @media @tablet {
+    .home_pd {
+      padding: 3em !important;
+    }
+    .home_mg {
+      margin: -3em !important;
+    }
   }
+
+  @media @desktop {
+    .home_pd {
+      padding: 1em 9em !important;
+    }
+    .home_mg {
+      margin: -1em -9em;
+    }
+  }
+
+
+  </style>
 
   /* transitions */
   .fade-enter-active, .fade-leave-active {

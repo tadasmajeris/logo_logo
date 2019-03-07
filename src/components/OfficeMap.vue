@@ -42,7 +42,7 @@ export default {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v9',
-      zoom: 2,
+      zoom: 1.75,
       center: [-32, 39.7]
     });
 
@@ -63,11 +63,12 @@ export default {
 
     .offices {
       text-align: left;
+      padding-right: 1em !important;
 
       h1 {
-        margin-top: 0.1em;
-        margin-left: 0;
-        padding-bottom: 0.2em;
+        margin: 0;
+        padding-bottom: 1.1em;
+        line-height: 0.9;
       }
 
       section {
