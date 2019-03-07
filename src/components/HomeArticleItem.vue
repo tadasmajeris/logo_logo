@@ -42,7 +42,7 @@ export default {
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1); ;
+      box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.1);
     }
 
     .article-image {

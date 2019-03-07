@@ -73,6 +73,12 @@ export default {
     color: #2c2828;
   }
 
+  .h1_home {
+    font-family: 'Karma Light';
+    font-size: 2.6em;
+    margin: 1.5em;
+  }
+
   /* transitions */
   .fade-enter-active, .fade-leave-active {
     transition-property: opacity;

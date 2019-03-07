@@ -1,6 +1,6 @@
 <template>
   <div class='home-articles'>
-    <h1>Articles Pages</h1>
+    <h1 class='h1_home'>Articles Pages</h1>
 
     <section class="grid grid--gut12">
       <HomeArticleItem v-for="{id, type, title, body, img} in articles"
@@ -27,11 +27,8 @@ export default {
 <style lang='less' scoped>
   .home-articles {
     margin-bottom: 2em;
-    
+
     h1 {
-      font-family: 'Karma Light';
-      font-size: 2.6em;
-      margin: 1.5em;
       margin-top: 3.6em;
     }
   }
