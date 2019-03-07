@@ -79,6 +79,13 @@ export default {
     margin: 1.5em;
   }
 
+  .home_pd {
+    padding: 1em 9em !important;
+  }
+  .home_mg {
+    margin: -1em -9em;
+  }
+
   /* transitions */
   .fade-enter-active, .fade-leave-active {
     transition-property: opacity;

@@ -11,6 +11,8 @@
 
     <HomeArticles :articles='articles'/>
 
+    <OfficeMap />
+
     <section class="home_mg signup">
       <h1 class="h1_home">Sign up</h1>
       <p v-text="`Insert your details below and we'll get in touch.`"></p>
@@ -58,25 +60,19 @@
 
 <script>
 // @ is an alias to /src
-import HomeArticles from '@/components/HomeArticles.vue'
+import HomeArticles from '@/components/HomeArticles.vue';
+import OfficeMap from '@/components/OfficeMap.vue';
 
 export default {
   name: 'home',
   props: ['articles'],
   components: {
-    HomeArticles
+    HomeArticles, OfficeMap
   }
 }
 </script>
 
 <style lang='less' scoped>
-  .home_pd {
-    padding: 1em 9em;
-  }
-  .home_mg {
-    margin: -1em -9em;
-  }
-
   .home {
     text-align: center;
 
