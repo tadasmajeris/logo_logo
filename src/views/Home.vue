@@ -1,8 +1,8 @@
 <template>
   <div class="home home_pd">
 
-    <Header />
-    <HomeArticles :articles='articles' />
+    <Header title="Welcome to the test of your life"/>
+    <HomeArticles :articles='articles' title="Articles Pages" />
     <OfficeMap />
     <SignUp />
     <Footer />

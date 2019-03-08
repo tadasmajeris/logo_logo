@@ -1,6 +1,6 @@
 <template>
   <div class='home-articles'>
-    <h1 class='h1_home'>Articles Pages</h1>
+    <h1 class='h1_home' v-text='title'></h1>
 
     <section class="grid grid--gut12">
       <HomeArticleItem v-for="{id, type, title, body, img} in articles"
@@ -17,7 +17,7 @@ import HomeArticleItem from './HomeArticleItem';
 
 export default {
   name: 'HomeArticles',
-  props: ['articles'],
+  props: ['articles', 'title'],
   components: {
     HomeArticleItem
   },

@@ -1,9 +1,13 @@
 <template>
-  <header class="home_mg">
-    <img alt="logo" src="../assets/img/logo/devtest_logo.png" />
+  <header class="home_mg" :class="{'is-article':isArticle}">
+    <router-link to="/">
+      <img v-if="isArticle" alt="logo" src="../assets/img/logo/devtest_logo-white.png" />
+      <img v-else alt="logo" src="../assets/img/logo/devtest_logo.png" />
+    </router-link>
+
     <div class='home_pd header-text'>
-      <h1>Welcome to the test of your life</h1>
-      <h2>This is a lead, it can go over two lines like so: Lorem ipsum dolor sit amet, consectetur.</h2>
+      <h1 v-text='title'></h1>
+      <h2 v-if="!isArticle">This is a lead, it can go over two lines like so: Lorem ipsum dolor sit amet, consectetur.</h2>
     </div>
   </header>
 </template>
@@ -11,6 +15,7 @@
 <script>
 export default {
   name: 'Header',
+  props: ['isArticle', 'title']
 }
 </script>
 
@@ -18,12 +23,18 @@ export default {
   @mobile:   ~"only screen and (max-width: 640px)";
 
   header {
+    text-align: center;
     margin: -1em -9em;
     margin-bottom: 0;
     padding-bottom: 11.4em;
     background-image: url('/img/3.jpg');
     background-size: cover;
     background-position: center;
+
+    &.is-article {
+      background-image: url('/img/2.jpg');
+      padding-bottom: 0em;
+    }
 
     .header-text {
       max-width: 900px;

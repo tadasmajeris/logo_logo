@@ -8,7 +8,7 @@
 
     <main>
       <transition name="fade">
-        <router-view :articles='articles' :article="articles[0]"></router-view>
+        <router-view :articles='articles' :article="selectedArticle"></router-view>
       </transition>
     </main>
 
@@ -27,6 +27,13 @@ export default {
     this.$http.get("http://jsonplaceholder.typicode.com/posts")
       .then(response => response.json(), error => console.log(error))
       .then(json => this.setupArticles(json), error => console.log(error));
+  },
+
+  computed: {
+    selectedArticle() {
+      const id = this.$route.params.id;
+      return this.articles.find(article=>id==article.id);
+    }
   },
 
   methods: {
@@ -72,8 +79,6 @@ export default {
   h1, h2, h3, h4, h5, h6 {
     color: #2c2828;
   }
-
-
 
   .h1_home {
     font-family: 'Karma Light';
