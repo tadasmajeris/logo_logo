@@ -1,29 +1,20 @@
-# brand42
+# LogoLogo project
 
-## Project setup
+Tadas Majeris' LogoLogo project.
+
+## 1. To run the project, go to the terminal and run these commands
+```
+git clone "https://github.com/tadasmajeris/logo_logo.git"
+cd logo_logo
+```
+
+## 2. Install project & dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## 3.### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Now visit 'http://localhost:8080' in your browser.
