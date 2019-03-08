@@ -13,7 +13,7 @@ cd logo_logo
 npm install
 ```
 
-## 3.### Compiles and hot-reloads for development
+## 3. Compile and run
 ```
 npm run serve
 ```
