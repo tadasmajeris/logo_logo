@@ -40,7 +40,7 @@ export default {
     setupArticles(json) {
       this.articles = json.slice(10, 13);
       const customData = [
-        { img: '/img/7.jpg', type: 'Article' },
+        { img: '/img/1.jpg', type: 'Article' },
         { img: '/img/4.jpg', type: 'News' },
         { img: '/img/5.jpg', type: 'Podcast' },
       ];
@@ -88,7 +88,7 @@ export default {
 
   @desktop:   ~"only screen and (min-width: 960px)";
   @mobile:   ~"only screen and (max-width: 640px)";
-  @tablet:    ~"only screen and (min-width: 720px) and (max-width: 959px)";
+  @tablet:    ~"only screen and (min-width: 640px) and (max-width: 959px)";
 
   @media @mobile {
     .home_pd {

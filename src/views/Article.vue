@@ -50,6 +50,9 @@ export default {
 </script>
 
 <style lang='less' scoped>
+  @mobile:   ~"only screen and (max-width: 640px)";
+  @tablet:    ~"only screen and (min-width: 640px) and (max-width: 959px)";
+
   .home {
     text-align: center;
 
@@ -64,10 +67,20 @@ export default {
       }
 
       .article-image {
-        height: 400px;
+        height: 500px;
         margin: 2em 0;
         background-size: cover;
+        background-position: center;
+
+        @media @tablet {
+          height: 400px;
+        }
+
+        @media @mobile {
+          height: 300px;
+        }
       }
+
     }
   }
 </style>
